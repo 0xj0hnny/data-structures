@@ -7,27 +7,27 @@ describe('hashTable', function() {
     hashTable = new HashTable();
   });
 
-  it('should have methods named "insert", "remove", and "retrieve', function() {
-    expect(hashTable.insert).to.be.a("function");
-    expect(hashTable.remove).to.be.a("function");
-    expect(hashTable.retrieve).to.be.a("function");
-  });
+ it('should have methods named "insert", "remove", and "retrieve', function() {
+   expect(hashTable.insert).to.be.a("function");
+   expect(hashTable.remove).to.be.a("function");
+   expect(hashTable.retrieve).to.be.a("function");
+ });
 
-  it('should store values that were inserted', function() {
-    hashTable.insert('Steven', 'Seagal');
-    expect(hashTable.retrieve('Steven')).to.equal('Seagal');
-  });
+ it('should store values that were inserted', function() {
+   hashTable.insert('Steven', 'Seagal');
+   expect(hashTable.retrieve('Steven')).to.equal('Seagal');
+ });
 
-  it('should not contain values that were not inserted', function() {
-    hashTable.insert('Steven', 'Spielberg');
-    expect(hashTable.retrieve('Steven')).not.to.equal('Seagal');
-  });
+ it('should not contain values that were not inserted', function() {
+   hashTable.insert('Steven', 'Spielberg');
+   expect(hashTable.retrieve('Steven')).not.to.equal('Seagal');
+ });
 
-  it('should not contain values that were removed', function() {
-    hashTable.insert('Steven', 'Tyler');
-    hashTable.remove('Steven');
-    expect(hashTable.retrieve('Steven')).to.equal(null);
-  });
+ it('should not contain values that were removed', function() {
+   hashTable.insert('Steven', 'Tyler');
+   hashTable.remove('Steven');
+   expect(hashTable.retrieve('Steven')).to.equal(null);
+ });
 
   it('should handle hash function collisions', function(){
     var v1 = "val1";
